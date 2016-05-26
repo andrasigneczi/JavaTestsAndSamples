@@ -30,19 +30,19 @@ public class CloneTest
 
         public Object clone() throws CloneNotSupportedException
         {
-            Class2 lR = (Class2)super.clone();
-            lR.c1 = (Class1)c1.clone();
+            Class2 lR = (Class2) super.clone();
+            lR.c1 = (Class1) c1.clone();
             return lR;
         }
     }
 
-    public static void main( String ... argv )
+    public static void main(String... argv)
     {
         Class2 c1 = new Class2();
         Class2 c2 = null;
         try
         {
-            c2 = (Class2)c1.clone();
+            c2 = (Class2) c1.clone();
             c2.s1 = "modified1";
             c2.s2 = "modified2";
             c2.c1.s1 = "trick1";
